@@ -118,8 +118,8 @@ Linux/Mac (for Cron) or Windows (for Task Scheduler)
 
 1. **Clone Repository:**
 ```bash
-git clone https://github.com/yourname/csv-to-db-etl.git
-cd csv-to-db-etl
+git clone https://github.com/pakloong/csv_to_db_etl.git
+cd csv_to_db_etl
 ```
 
 2. **Create Virtual Environment:**
@@ -141,12 +141,12 @@ cp .env.example .env
 
 5. **Create Database & Tables:**
 ```bash
-psql -U postgres -d your_database < sql/create_tables.sql
+psql -U postgres -d your_database < sql/sql_setup.sql
 ```
 
 6. **Run ETL Pipeline Manually:**
 ```bash
-python src/main.py
+python src/etl_pipeline.py
 ```
 
 ---
@@ -174,7 +174,7 @@ CHUNK_SIZE=1000
 MAX_RETRIES=3
 ON_ERROR_ACTION=log_and_continue  # or 'halt'
 ```
-
+<!---
 ---
 
 ## 💻 Code Examples
@@ -352,7 +352,7 @@ crontab -e
 ```bash
 crontab -l  # List all scheduled jobs
 ```
-<!---
+
 ---
 
 ## 🧪 Testing
